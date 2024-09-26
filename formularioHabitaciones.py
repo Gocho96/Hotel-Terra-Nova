@@ -1,5 +1,6 @@
 def formularioHabitaciones():
     habitaciones={}
+    tipos=[]
     numeros=[]
     personas=[]
     aires=[]
@@ -15,6 +16,8 @@ def formularioHabitaciones():
     contador=0
 
     while x == "s" or x=="S":
+        tipo=input("Ingrese el tipo de habitación (Matrimonial, Duo, Solitario): ")
+        tipos.append(tipo)
         numero=input("Ingrese el número de la habitación: ")
         numeros.append(numero)
         persona=int(input("Ingrese la cantidad de personas permitidas: "))
@@ -34,5 +37,3 @@ def formularioHabitaciones():
         x = input("¿Quieres ingresar otra habitación? S/N: ")
         if x == "s" or x == "S":
             contador+=1
-
-formularioHabitaciones()
